@@ -13,9 +13,13 @@ interface HumanInterface {
 
     void dance();
     //   void bake() {}                    ------->                    Interface abstract methods can not have body
+
+    static void bake() {
+        System.out.println("Hello There! I am a non-abstract method inside an Interface!");
+    }
 }
 
-abstract class HumanAbstract implements HumanInterface{
+abstract class HumanAbstract {
     String name = null;
 
     abstract void talk();
@@ -25,7 +29,7 @@ abstract class HumanAbstract implements HumanInterface{
     }
 }
 
-class Abstract extends HumanAbstract {
+class Abstract extends HumanAbstract implements HumanInterface {
     void talk() {
         System.out.println("Let's Talk!");
     }
@@ -36,7 +40,7 @@ class Abstract extends HumanAbstract {
 
 }
 
-public class AbstractTutorial {
+class AbstractTutorial {
     public static void main(String[] args) {
 
         //HumanAbstract human = new HumanAbstract(); An Abstract class can not be initiated!
@@ -51,6 +55,7 @@ public class AbstractTutorial {
         human.hear();
         HumanInterface.walk();
         human.dance();
+
 
     }
 
