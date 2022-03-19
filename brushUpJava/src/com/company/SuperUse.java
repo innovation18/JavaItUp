@@ -22,7 +22,6 @@ class Connection extends LegalEntity {
 
     int customerId;
     int facilityId;
-    String legalEntity;
     String sourceSystem;
     String superKeyword = "Child Variable";
 
@@ -70,9 +69,5 @@ class Connection extends LegalEntity {
         Connection connection = new Connection(connectionId, customerId, facilityId, sourceSystem, legalEntity);
 
         connection.connectionData();
-
-
-
-
     }
 }
