@@ -9,7 +9,7 @@ class SBI extends Bank {
 }
 
 class ICICI extends Bank {
-   static float getInterestRate () {return 9.0F;}
+   static float getInterestRate () {return 9;}
 }
 
 public class MethodOverriding {
